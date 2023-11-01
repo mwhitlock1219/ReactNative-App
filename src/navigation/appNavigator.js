@@ -6,6 +6,9 @@ import HomeScreen from '../screens/HomeScreen';
 import ProductCategoriesScreen from '../screens/ProductCategoriesScreen';
 import AllProductsScreen from '../screens/AllProductsScreen';
 
+
+//This file handles the Navigation of the app. When a new screen/view needs to be displayed one can add that
+//view to this file. One can also add the logic for a tabBar Navigator here.
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
