@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from '../screens/HomeScreen';
 import ProductCategoriesScreen from '../screens/ProductCategoriesScreen';
 import AllProductsScreen from '../screens/AllProductsScreen';
+import CameraScreen from '../screens/CameraScreen';
 
 
 //This file handles the Navigation of the app. When a new screen/view needs to be displayed one can add that
@@ -19,6 +20,7 @@ const AppNavigator = () => {
         initialRouteName='Home'
       >
         <Stack.Screen name="Home"component={HomeScreen}/> 
+        <Stack.Screen name="Camera" component={CameraScreen}/>
         <Stack.Screen name="Product Categories" component={ProductCategoriesScreen}/>
         <Stack.Screen name="All Products" component={AllProductsScreen}/>
       </Stack.Navigator>

@@ -51,5 +51,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>We need access to your camera to take photos and videos for a test feature.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Accessing your photo library for the first time</string>
 </dict>
 </plist>
