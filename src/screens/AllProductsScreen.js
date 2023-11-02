@@ -12,9 +12,7 @@ const AllProductsScreen = () => {
   
   const getAllProducts = async () => {
     try {
-      const response = await fetchAllProducts();
-      console.log(response)
-      let productList = response.products.map(product => product.name);
+      const productList = await fetchAllProducts();
       setData(productList);
     } catch (error) {
       console.error(error);

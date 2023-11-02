@@ -1,6 +1,6 @@
 import React, { useEffect, useRef} from 'react';
-import { StyleSheet, SafeAreaView, Platform } from 'react-native';
 import { RNCamera } from 'react-native-camera';
+import { StyleSheet, SafeAreaView, Platform } from 'react-native';
 import { request, RESULTS, PERMISSIONS_ANDROID, PERMISSIONS_IOS } from 'react-native-permissions';
 
 

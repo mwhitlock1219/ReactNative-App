@@ -15,7 +15,9 @@ export const fetchCategories = async () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      return await response.json();
+      let json = await response.json()
+      let categoryList = json.categories.map(category => category.name)
+      return categoryList;
     } catch (error) {
       throw error;
     }
@@ -32,7 +34,9 @@ export const fetchAllProducts = async () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      return await response.json();
+      let json = await response.json()
+      let productList = json.products.map(product => product.name);
+      return productList;
     } catch (error) {
       throw error;
     }

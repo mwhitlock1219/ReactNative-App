@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { View, Text, Image, ScrollView, Button , Platform, StyleSheet} from "react-native";
+import React from "react";
+import { View, Text, Image, ScrollView, Button , StyleSheet} from "react-native";
 
 //This screen displays the 'Home' UI 
 //In its current state this screen only shows a scrollable view with some basic buttons to take you to other views

@@ -14,8 +14,7 @@ const ProductCategoriesScreen = () => {
 
   const getCategories = async () => {
     try {
-    const response = await fetchCategories();
-    let categoryList = response.categories.map(category => category.name)
+    const categoryList = await fetchCategories();
     setData(categoryList);
 } catch (error) {
      console.error(error);
