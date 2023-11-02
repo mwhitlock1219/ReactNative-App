@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { View, Text, Image, ScrollView, Button , Platform, StyleSheet} from "react-native";
-import { check, request, RESULTS, PERMISSIONS_ANDROID, PERMISSIONS_IOS, PERMISSIONS  } from 'react-native-permissions';
 
 //This screen displays the 'Home' UI 
 //In its current state this screen only shows a scrollable view with some basic buttons to take you to other views
@@ -10,50 +9,8 @@ import { check, request, RESULTS, PERMISSIONS_ANDROID, PERMISSIONS_IOS, PERMISSI
 const HomeScreen = ({navigation}) => {
 
   const handleOpenCamera = () => {
-    requestCameraPermission();
     navigation.navigate('Camera');
   };
-
-// Function to request camera permissions
-  const requestCameraPermission = async () => {
-    // check(PERMISSIONS.IOS.CAMERA)
-    // .then(result => {
-    //   if(result === RESULTS.GRANTED){
-    //     console.log("camera access granted")
-    //   } else {
-    //     console.log("camera access NOT granted")
-    //     return request(PERMISSIONS.IOS.CAMERA);
-    //   }
-    // })
-    // .then(result => {
-    //   if(result === RESULTS.GRANTED) {
-    //     console.log("going to camera")
-    //   } else {
-    //     console.log("camera access denied, try again")
-    //   }
-    // })
-    // .catch(error => {
-    //   console.log(error)
-    // })
-
-    if (Platform.OS === 'ios') {
-      const result = await request(PERMISSIONS.IOS.CAMERA);
-      console.log("result" + result)
-      if (result === RESULTS.GRANTED) {
-        console.log('Camera permission granted');
-      }
-    } else {
-      const result = await request(PERMISSIONS.ANDROID.CAMERA);
-      if (result === RESULTS.GRANTED) {
-        console.log('Camera permission granted');
-      }
-    }
-  };
-
-// Call this function to request camera permissions
-  // useEffect(() => {
-  //   requestCameraPermission();
-  // }, []);
 
     return (
       <View style={styles.container}>
